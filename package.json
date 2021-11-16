@@ -1,7 +1,7 @@
 {
   "name": "kidz-quest",
   "version": "1.0.0",
-  "description": "",
+  "description": "child friendly we app for Assemblies of the Lord Jesus Chrits (ALJC) in which parents will be able to regiuster the children",
   "main": "index.js",
   "scripts": {
     "build": "cd frontend && npm run build",
