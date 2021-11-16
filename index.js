@@ -96,6 +96,16 @@ app.patch('/checkout/:id', async (req, res) => {
     res.status(500)
   }
 })
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'))
+}
+
+app.get('/*', function (req, res) {
+  res.sendFile(`${__dirname}/frontend/build/index.html`)
+})
+
+//    "sass": "sass src/styles/main.scss:src/styles/main.css --watch --no-source-map"
 app.listen(process.env.PORT || 3001, () => {
   console.log(`running safely`)
 })
