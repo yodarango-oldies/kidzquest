@@ -1,0 +1,162 @@
+.register-form {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  overflow-y: scroll;
+  background-image: linear-gradient(45deg, #8729cc, #211983, #c6125e);
+  animation: formUp 500ms ease-in;
+  padding-bottom: 10rem;
+
+  h2 {
+    margin-top: 2rem;
+  }
+}
+
+@keyframes formUp {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.register-form_boys-girls-wrapper {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem auto;
+
+  div {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+
+    &:hover {
+      animation: rotate 500ms ease-in infinite;
+    }
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .selected-gender {
+    border: 5px solid white;
+  }
+
+  .label-boy {
+    transform: rotate(-0.01turn);
+  }
+  .label-girl {
+    transform: rotate(0.01turn);
+  }
+}
+
+.register-form_input-wrapper {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  label {
+    width: 100%;
+    display: block;
+    font-family: 'postino-std', serif;
+    font-size: 1.2rem;
+    margin: 2rem 0 0.8rem;
+    color: $secondary-color;
+  }
+
+  #form_boy,
+  #form_girl {
+    display: none;
+  }
+
+  #photo-label {
+    background-image: url('/images/camera.svg');
+    width: 5rem;
+    height: 5rem;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto 0 0;
+  }
+
+  #photo {
+    display: none;
+  }
+
+  .phot-preview-wrapper {
+    height: 11.5rem;
+    width: 11.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(70deg, $secondary-color, $third-color);
+
+    .photo-preview {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      margin: auto;
+      display: block;
+      // background-size: cover;
+      // background-position: center;
+      // background-repeat: no-repeat;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .photo-canvas-place-holder,
+  .compressed-image {
+    display: none;
+  }
+}
+
+// re-register form
+.register-form_std-input {
+  margin: 2rem auto 0;
+}
+
+.re-register-buttons {
+  font-size: 1.3rem;
+  max-width: 400px;
+  height: 3.5rem;
+}
+
+.register-form_subwrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.find-child-wrapper {
+  background-color: rgba(255, 255, 255, 0.514);
+  padding: 1rem 1rem 0.1rem;
+  border-radius: 0.5rem;
+  display: block;
+  max-width: 400px;
+  margin: 2rem auto;
+
+  p {
+    text-align: left;
+    span {
+      position: static;
+      transform: none;
+      color: white;
+    }
+  }
+}

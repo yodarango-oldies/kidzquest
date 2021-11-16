@@ -1,0 +1,323 @@
+.kidz-quest-wrapper {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 3;
+  width: 90%;
+  height: 5rem;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media (min-width: 800px) {
+      height: 5rem;
+      margin: 0 auto 3rem;
+    }
+  }
+  section div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 99%;
+    height: 4rem;
+    width: 5rem;
+    animation: updownOne 3500ms ease-in infinite;
+    @media (min-width: 800px) {
+      height: 6rem;
+      width: 7rem;
+    }
+  }
+
+  .kidz-quest-wrapper_secrtion-orange {
+    .kidz-quest-wrapper_k {
+      background-image: url('/images/K1_0001.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_i {
+      background-image: url('/images/i2_0001.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+    .kidz-quest-wrapper_d {
+      background-image: url('/images/d2_0001.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_z {
+      background-image: url('/images/z2_0001.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_space {
+      width: 4rem;
+    }
+    .kidz-quest-wrapper_q {
+      background-image: url('/images/Q1_0001.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_u {
+      background-image: url('/images/u2_0001.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+    .kidz-quest-wrapper_e {
+      background-image: url('/images/e2_0001.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_s {
+      background-image: url('/images/s2_0001.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_t {
+      background-image: url('/images/t2_0001.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+  }
+
+  .kidz-quest-wrapper_secrtion-white {
+    .kidz-quest-wrapper_space {
+      width: 4rem;
+    }
+    .kidz-quest-wrapper_R {
+      background-image: url('/images/R1_0007.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_e {
+      background-image: url('/images/e2_0007.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_a {
+      background-image: url('/images/a2_0007.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+    .kidz-quest-wrapper_d {
+      background-image: url('/images/d2_0007.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_y {
+      background-image: url('/images/y2_0007.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_4 {
+      background-image: url('/images/4_0007.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+    .kidz-quest-wrapper_D {
+      background-image: url('/images/D1_0007.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_x {
+      background-image: url('/images/x2_0007.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_p {
+      background-image: url('/images/p2_0007.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+    .kidz-quest-wrapper_r {
+      background-image: url('/images/r2_0007.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_i {
+      background-image: url('/images/i2_0007.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_n {
+      background-image: url('/images/n2_0007.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+    .kidz-quest-wrapper_c {
+      background-image: url('/images/c2_0007.png');
+      animation: updownTwo 3700ms ease-out infinite;
+    }
+    .kidz-quest-wrapper_E {
+      background-image: url('/images/E1_0007.png');
+      animation: updownOne 3500ms ease-in infinite;
+    }
+    .kidz-quest-wrapper_question-mark {
+      background-image: url('/images/_Question_Mark0007.png');
+      animation: updownThree 4000ms ease infinite;
+    }
+  }
+}
+
+@keyframes updownOne {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+}
+@keyframes updownTwo {
+  0% {
+    transform: translateY(0rem);
+  }
+  33% {
+    transform: translateY(0.4rem);
+  }
+  66% {
+    transform: translateY(0.6rem);
+  }
+  66% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes updownThree {
+  0% {
+    transform: translateY(0rem);
+  }
+  25% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0.1rem);
+  }
+  75% {
+    transform: translateY(0rem);
+  }
+}
+.move-me-around {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  top: 25vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(238, 58, 178);
+  height: 2rem;
+  width: 80%;
+  max-width: 300px;
+
+  @media (min-width: 800px) {
+    top: 1rem;
+  }
+
+  @media (max-height: 760px) {
+    top: 30vh;
+  }
+
+  @media (max-height: 700px) {
+    top: 3rem;
+  }
+}
+
+// ===============  child profile row ================== //
+.child-progile-row-wrapper {
+  background-color: thistle;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-areas:
+    'img img name name name'
+    'toggle toggle time time time'
+    'pname pname pname pname pname'
+    'pnumber pnumber pnumber pnumber pnumber'
+    'clink clink clink clink clink';
+  padding: 1rem;
+  max-width: 500px;
+
+  .child-profile-row_gender-boy,
+  .child-profile-row_gender-girl {
+    height: 5rem;
+    width: 5rem;
+    border-top-right-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-image: url('../images/boy_icon.png');
+    grid-area: img;
+  }
+  .child-profile-row_gender-girl {
+    background-image: url('../images/girl-icon.png');
+  }
+
+  .child-profile-row_fullName {
+    grid-area: name;
+    text-align: left;
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: $main-color;
+    font-size: 1.2rem;
+  }
+
+  .child-profile-row_checkedStatusIn,
+  .child-profile-row_checkedStatusOut {
+    grid-area: toggle;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 4rem;
+    background-color: $secondary-color;
+    position: relative;
+    margin: 0.5rem 0;
+
+    span {
+      position: absolute;
+      display: block;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .checkedStatus_in {
+        left: 5.3rem;
+      }
+      .checkedStatus_out {
+        left: 2rem;
+      }
+    }
+  }
+  .child-profile-row_checkedStatusOut {
+    background-color: $main-color;
+  }
+
+  .checkedStatus_in {
+    background-color: $secondary-color;
+    span {
+      left: 5.5rem;
+    }
+  }
+
+  .checkedStatus_out {
+    background-color: $main-color;
+    span {
+      left: 1.8rem;
+    }
+  }
+
+  .child-profile-row_status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $main-color;
+    padding-left: 1rem;
+  }
+
+  .guardian-phone-number {
+    grid-area: pnumber;
+    padding: 0.5rem 0;
+    color: $main-color;
+  }
+  .guardian-name {
+    grid-area: pname;
+    padding: 0.5rem 0;
+    color: $main-color;
+  }
+  .link-to-child {
+    grid-area: clink;
+    padding: 0.5rem 0;
+    color: $secondary-color;
+  }
+}
