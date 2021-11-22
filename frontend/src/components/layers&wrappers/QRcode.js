@@ -17,7 +17,7 @@ const qrCode = new QRCodeStyling({
 const QRCode = ({ childId, handleCloseForm }) => {
   const today = new Date()
   const dayOfWeek = today.getDay()
-  const [url] = useState(`http:192.168.1.16:3000/child?childId=${childId}`)
+  const [url] = useState(`https://kidz-quest.herokuapp.com/child?childId=${childId}`)
   const [color] = useState(dayOfWeek === 3 ? '#38a3a5' : dayOfWeek === 4 ? '#be0aff' : dayOfWeek === 5 ? '#ff0000' : '')
   const ref = useRef(null)
 
