@@ -72,7 +72,9 @@ const ChildProfileRow = ({ child }) => {
         </p>
       )}
       <p className="guardian-name">Guardian Name: {child.guardianName}</p>
-      <p className="guardian-phone-number">Guardian Phone #: {child.gueardianPhoneNumber}</p>
+      <p className="guardian-phone-number">
+        Guardian Phone #: <b>{child.guardianPhoneNumber}</b>
+      </p>
       <Link to={{ pathname: '/child', search: `?childId=${child.childId}` }} className="link-to-child ">
         See all info
       </Link>

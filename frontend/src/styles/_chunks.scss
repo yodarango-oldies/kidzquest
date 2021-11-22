@@ -309,6 +309,10 @@
     grid-area: pnumber;
     padding: 0.5rem 0;
     color: $main-color;
+
+    b {
+      color: rgb(255, 44, 55);
+    }
   }
   .guardian-name {
     grid-area: pname;
