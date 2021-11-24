@@ -18,6 +18,11 @@ const Form = ({ showQRcode, handleCloseForm }) => {
   const [genderState, setgenderState] = useState('')
 
   // *********************** submit hte form  ************************
+  const regex = new RegExp('^[0-9]+$', 'g')
+  // const checkRegex = () => {
+  //   let x = regex.test(parentPhone.current.innerHTML)
+  //   console.log(x)
+  // }
 
   // ============== run validation on all inputs
   const runInputValidation = () => {
@@ -35,6 +40,9 @@ const Form = ({ showQRcode, handleCloseForm }) => {
       return false
     } else if (parentPhone.current.innerHTML === '' || parentPhone.current.innerHTML === ' ') {
       alert('Phone Number is required')
+      return false
+    } else if (regex.test(parentPhone.current.innerHTML === false)) {
+      alert('Only numbers are accepted on the phone # fields. Please make sure there are no spaces nor special characters.')
       return false
     } else if (!childPhoto.current.value) {
       alert('Photo is required')

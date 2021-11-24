@@ -14,7 +14,11 @@ const Home = () => {
       <Portal3D />
       <MovemeAround />
       <ThreeDButton />
-      <div className="footer"></div>
+      <div className="footer">
+        <i>
+          <a href="https://danielrangel.net">Desgined By D.R.</a>
+        </i>
+      </div>
     </div>
   )
 }

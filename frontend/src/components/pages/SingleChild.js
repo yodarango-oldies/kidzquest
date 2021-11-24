@@ -68,6 +68,10 @@ const SingleChild = () => {
       <h2 className="std-title-white">{childFetched.childLastName}</h2>
       <h2 className="std-title">Age:</h2>
       <h2 className="std-title-white">{childFetched.childAge}</h2>
+      <h2 className="std-title">Guardian's Name:</h2>
+      <h2 className="std-title-white">{childFetched.guardianName}</h2>
+      <h2 className="std-title">Guardian's Phone #:</h2>
+      <h2 className="std-title-white">{childFetched.guardianPhoneNumber}</h2>
 
       {login && (
         <section className="child-progile-row-wrapper">

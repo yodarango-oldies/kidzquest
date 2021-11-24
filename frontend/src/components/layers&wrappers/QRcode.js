@@ -7,7 +7,7 @@ import boyIcon from '../../images/Q1_0001.png'
 const qrCode = new QRCodeStyling({
   width: 300,
   height: 300,
-  image: boyIcon,
+  //image: boyIcon,
   imageOptions: {
     crossOrigin: 'anonymous',
     margin: 20,
@@ -18,7 +18,7 @@ const QRCode = ({ childId, handleCloseForm }) => {
   const today = new Date()
   const dayOfWeek = today.getDay()
   const [url] = useState(`https://kidz-quest.herokuapp.com/child?childId=${childId}`)
-  const [color] = useState(dayOfWeek === 3 ? '#38a3a5' : dayOfWeek === 4 ? '#be0aff' : dayOfWeek === 5 ? '#ff0000' : '')
+  const [color] = useState(dayOfWeek === 3 ? '#023e8a' : dayOfWeek === 4 ? '#fd9e02' : dayOfWeek === 5 ? '#9d0208' : '')
   const ref = useRef(null)
 
   useEffect(() => {
