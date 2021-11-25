@@ -9,8 +9,8 @@ const ReRegistration = ({ showQRcode, showRegistrationForm }) => {
   const findChild = async () => {
     setChildState({ message: 'Looking...🔎' })
     try {
-      if (codeInput.current.innerHTML !== '' || codeInput.current.innerHTML !== ' ') {
-        const childName = codeInput.current.innerHTML.toLowerCase().replace('&nbsp;', '')
+      if (codeInput.current.value !== '' || codeInput.current.value !== ' ') {
+        const childName = codeInput.current.value.toLowerCase().trim() //.replace('&nbsp;', '')
         const req = await fetch(`/child/${childName}`)
         const children = await req.json()
         console.log(childName)
@@ -35,7 +35,7 @@ const ReRegistration = ({ showQRcode, showRegistrationForm }) => {
         },
         body: JSON.stringify(childObj),
       })
-      req.status === 200 ? showQRcode(childObj.childId) : alert('Something went wrong. Please try again!')
+      req.status === 200 ? showQRcode(childObj.childId, childObj.childFirstName) : alert('Something went wrong. Please try again!')
     } catch (error) {
       console.log(error)
     }
@@ -48,7 +48,10 @@ const ReRegistration = ({ showQRcode, showRegistrationForm }) => {
         <p className="std-text-info">
           <i>(If already registered)</i>
         </p>
-        <p contentEditable id="childs-name" ref={codeInput} className="std-input register-form_std-input"></p>
+        <p id="childs-name" className="std-input register-form_std-input">
+          {' '}
+          <input type="text" ref={codeInput} />
+        </p>
         <button className="pink-button re-register-buttons" onClick={findChild}>
           Find My Child
         </button>
@@ -59,7 +62,7 @@ const ReRegistration = ({ showQRcode, showRegistrationForm }) => {
               <p className="std-title">
                 Name:{' '}
                 <span className="std-title">
-                  {child.childFirstName} {child.childLastName}
+                  {child.childFirstName.replace('&nbsp;', '')} {child.childLastName.replace('&nbsp;', '')}
                 </span>
               </p>
               <p className="std-title">

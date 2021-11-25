@@ -23,8 +23,8 @@ const ThreeDButton = () => {
         )
   }
 
-  const showQRcode = (childId) => {
-    setformState(<QRcode childId={childId} handleCloseForm={() => setformState(false)} />)
+  const showQRcode = (childId, childName) => {
+    setformState(<QRcode childId={childId} childName={childName} handleCloseForm={() => setformState(false)} />)
   }
   return (
     <Fragment>
