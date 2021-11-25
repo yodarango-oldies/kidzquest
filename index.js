@@ -45,7 +45,10 @@ app.post('/re-registration', async (req, res) => {
 // find a child by Name
 app.get('/child/:childName', async (req, res) => {
   try {
-    const child = await Registration.find({ childFirstName: { $regex: `${req.params.childName}` } })
+    const child = await Registration.find(
+      { childFirstName: { $regex: `${req.params.childName}` } },
+      { childFirstName: 1, childLastName: 1, childId: 1, _id: 1, childAge: 1 },
+    )
     console.log(child)
     res.send(child)
   } catch (error) {}
@@ -64,7 +67,8 @@ app.get('/getchild/:childId', async (req, res) => {
 
 // get all the children for the admin page
 app.get('/all-children', async (req, res) => {
-  const children = await Reregistration.find({}).sort({ childFirstName: 1 }).exec()
+  const children = await Reregistration.find({}, { photo: 0 }).limit(50).sort({ childFirstName: 1 }).exec()
+  children
   res.send(children)
 })
 

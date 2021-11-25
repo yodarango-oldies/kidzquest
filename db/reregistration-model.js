@@ -4,31 +4,31 @@ const reRegistrationSchema = new mongoose.Schema({
   childFirstName: {
     type: String,
     maxlength: 200,
-    required: true,
+    // required: true,
   },
   childLastName: {
     type: String,
     maxlength: 200,
-    required: true,
+    // required: true,
   },
   childAge: {
     type: String,
     maxlength: 5,
-    required: true,
+    // required: true,
   },
   guardianName: {
     type: String,
     maxlength: 200,
-    required: true,
+    // required: true,
   },
   guardianPhoneNumber: {
     type: String,
     maxlength: 15,
-    required: true,
+    // required: true,
   },
   gender: {
     type: String,
-    required: true,
+    // required: true,
   },
   photo: {
     type: String,
@@ -41,7 +41,7 @@ const reRegistrationSchema = new mongoose.Schema({
   date: Date,
   childId: {
     type: String,
-    required: true,
+    // required: true,
   },
 })
 
