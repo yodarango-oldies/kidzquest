@@ -48,7 +48,7 @@ const ChildProfileRow = ({ child }) => {
       {child.gender === 'boy' && <div className="child-profile-row_gender-boy"></div>}
       {child.gender === 'girl' && <div className="child-profile-row_gender-girl"></div>}
       <h4 className="child-profile-row_fullName std-text">
-        {child.childFirstName} {child.childLastName}
+        {child.childFirstName.replace('&nbsp;', '')} {child.childLastName.replace('&nbsp;', '')}
       </h4>
       {toggleClass === 'checkedStatus_in' && (
         <div className={`child-profile-row_checkedStatusIn ${toggleClass}`}>

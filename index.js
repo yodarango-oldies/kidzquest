@@ -1,4 +1,4 @@
-require('dotenv').config()
+//require('dotenv').config()
 
 // server
 const express = require('express')
@@ -72,6 +72,16 @@ app.get('/all-children', async (req, res) => {
   res.send(children)
 })
 
+app.get('/findAdmin/:childName', async (req, res) => {
+  try {
+    const child = await Reregistration.find(
+      { childFirstName: { $regex: `^${req.params.childName.toLowerCase()}` } },
+      { childFirstName: 1, childLastName: 1, childId: 1, _id: 1, childAge: 1, checkedInOptions: 1 },
+    )
+    console.log(child)
+    res.send(child)
+  } catch (error) {}
+})
 // ===================== PUTS ============================== //
 // checkedIn child
 app.patch('/checkin/:id', async (req, res) => {

@@ -34,6 +34,15 @@ const Admin = () => {
     }
   }
 
+  // ============== look up child
+  const LookUpChild = async (e) => {
+    const req = await fetch(`/findAdmin/${e.target.value}`)
+    const allChildren = await req.json()
+    console.log(allChildren)
+    setchildren(allChildren)
+    console.log(e.target.value)
+  }
+
   return (
     <Fragment>
       {!login && (
@@ -52,7 +61,12 @@ const Admin = () => {
         </div>
       )}
       <div className="admin-page-main-rapper">
-        <h1></h1>
+        <p className={'std-input'}>
+          <input type={'text'} onChange={LookUpChild} />
+          {/*<button className="pink-button re-register-buttons" onClick={findChild}>
+            Find Child
+      </button>*/}
+        </p>
         {children.map((child) => (
           <ChildProfileRow child={child} key={child._id} />
         ))}

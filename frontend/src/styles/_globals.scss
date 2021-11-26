@@ -69,6 +69,23 @@
   color: white;
   font-family: 'postino-std', serif;
   font-size: 1.2rem;
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-family: 'postino-std', serif;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+  }
 
   &:focus {
     border: 2px solid $third-color;
