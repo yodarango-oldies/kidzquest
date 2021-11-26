@@ -16,6 +16,7 @@ const SingleChild = () => {
     const req = await fetch(`/getchild/${childId}`)
     const child = await req.json()
     setchildFetch(child)
+    console.log(child)
 
     // fetch the toggle according to the checked in status
     child.checkedInOptions.checkedIn === false
@@ -53,7 +54,6 @@ const SingleChild = () => {
       },
       body: JSON.stringify({ status: false }),
     })
-    console.log(req)
   }
   // ================= check that the user is logged in ===========
   const [login] = useState(Cookie.get('logedin'))

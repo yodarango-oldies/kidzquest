@@ -8,7 +8,7 @@ $press-time: 0.4s;
   background-color: #3c096c;
   position: absolute;
   border-radius: 50%;
-  top: 80vh;
+  top: 65vh;
   left: 50%;
   width: $button-width;
   height: $button-height;
@@ -76,7 +76,7 @@ $press-time: 0.4s;
   object-position: center;
   position: absolute;
   z-index: 2;
-  top: 68vh;
+  top: 55vh;
   left: calc(50vw - 2.5rem);
   transform: rotate(0.25turn);
   animation: updown 2000ms ease-in infinite;
@@ -89,13 +89,13 @@ $press-time: 0.4s;
 }
 @keyframes updown {
   0% {
-    top: 68vh;
+    top: 50vh;
   }
   50% {
-    top: 71vh;
+    top: 55vh;
   }
   100% {
-    top: 68vh;
+    top: 50vh;
   }
 }
 

@@ -24,9 +24,10 @@ const ReRegistration = ({ showQRcode, showRegistrationForm }) => {
   }
   // *********************** Find the child  ************************
   const handleChild_Re_registration = async (childObj) => {
-    delete childObj.date
-    delete childObj.checkedIn
-    delete childObj._id
+    //delete childObj.date
+    // delete childObj.checkedIn
+    //delete childObj._id
+    console.log(childObj)
     try {
       const req = await fetch('/re-registration', {
         method: 'POST',

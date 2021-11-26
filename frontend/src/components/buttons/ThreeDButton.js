@@ -24,6 +24,7 @@ const ThreeDButton = () => {
   }
 
   const showQRcode = (childId, childName) => {
+    //console.log(childId, childName)
     setformState(<QRcode childId={childId} childName={childName} handleCloseForm={() => setformState(false)} />)
   }
   return (

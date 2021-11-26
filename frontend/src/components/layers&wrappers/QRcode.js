@@ -1,13 +1,9 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react'
 import QRCodeStyling from 'qr-code-styling'
 
-//image
-import boyIcon from '../../images/Q1_0001.png'
-
 const qrCode = new QRCodeStyling({
   width: 300,
   height: 300,
-  //image: boyIcon,
   imageOptions: {
     crossOrigin: 'anonymous',
     margin: 20,
@@ -71,8 +67,6 @@ const QRCode = ({ childId, handleCloseForm, childName }) => {
             <button onClick={onDownloadClick} className="pink-button">
               Download
             </button>
-            {/*<p className="std-text-info">Child's Id</p>
-      <p className="pink-text">{childId}</p>*/}
             <button className="white-button" onClick={handleCloseForm}>
               Close
             </button>
