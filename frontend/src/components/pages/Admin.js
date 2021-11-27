@@ -61,7 +61,7 @@ const Admin = () => {
         </div>
       )}
       <div className="admin-page-main-rapper">
-        <p className={'std-input'}>
+        <p className={'std-input std-input_admin-page'}>
           <input type={'text'} onChange={LookUpChild} />
           {/*<button className="pink-button re-register-buttons" onClick={findChild}>
             Find Child
